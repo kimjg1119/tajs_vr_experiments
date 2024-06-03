@@ -325,6 +325,8 @@ public class LibraryRunners {
                 System.out.println("Analysis " + (throwable == null ?
                         ("succeeded and passed all " + analysisMonitor.getNumberOfSoundnessChecks() + " soundness tests") :
                         ("failed: " + throwable.getMessage())));
+                if (throwable != null)
+                    throwable.printStackTrace();
                 System.out.println("Total time: " + String.format("%.2fs", ((double)elapsed)/1000));
 
                 if (throwable == null)

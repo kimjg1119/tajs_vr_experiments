@@ -50,6 +50,9 @@ import static dk.brics.tajs.util.Collections.newList;
 import static dk.brics.tajs.util.Collections.newMap;
 import static dk.brics.tajs.util.Collections.newSet;
 
+import kr.ac.korea.plrg.mergeable.stat.MergeableMapStat$;
+import kr.ac.korea.plrg.mergeable.stat.MergeableSubmapStat$;
+
 public class LibraryRunners {
     public interface LibraryBenchmarkExperimentRunner {
         void runTests() throws Exception;
@@ -63,7 +66,11 @@ public class LibraryRunners {
 
         @Override
         public void runTests() throws Exception {
-            List<Path> testFiles = Files.list(Paths.get("test-resources/src/lodash/test-suite/4.17.10/")).collect(Collectors.toList());
+            List<Path> testFiles = Files.list(Paths.get("test-resources/src/lodash/test-suite/4.17.10/"))
+                    .collect(Collectors.toList());
+            
+            // only test 14
+            testFiles = testFiles.stream().filter(p -> p.toString().contains("14")).collect(Collectors.toList());
 
             OptionValues optionValues = new OptionValues();
             optionValues.enableTest();
@@ -76,7 +83,7 @@ public class LibraryRunners {
             optionValues.enablePolyfillES6Promises();
             optionValues.enableConsoleModel();
             optionValues.enableNoMessages();
-            optionValues.setAnalysisTimeLimit(300);
+            optionValues.setAnalysisTimeLimit(350);
 
             optionValues.getUnsoundness().setUsePreciseFunctionToString(true);
 
@@ -320,6 +327,9 @@ public class LibraryRunners {
                 } catch (Throwable e) {
                     throwable = e;
                 }
+                
+                MergeableMapStat$.MODULE$.dumpStatistics("map.log");
+                MergeableSubmapStat$.MODULE$.dumpStatistics("map.log");
 
                 long elapsed = System.currentTimeMillis() - time;
                 System.out.println("Analysis " + (throwable == null ?

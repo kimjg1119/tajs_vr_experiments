@@ -1,0 +1,108 @@
+----------- MergeableMap Statistics -----------
+[Copy]
+withHashMap: 2288044(sum: 13675455) with 220ms, average: 96ns (16ns per element)
+withMergeMap: 52976301(sum: 700947942) with 7679ms, average: 144ns (10ns per element)
+and cache uses 52976301(sum: 228560211) with 5424ms, average: 102ns (23ns per element)
+
+[Single Operation]
+put (hash) : 1669896426 with 34s, average: 20ns
+put (merge): 1523325 with 262ms, average: 172ns
+
+[Iteration]
+entrySet (hash) : 49558765 with 547ms, average: 11ns
+entrySet (merge): 55093 with 604ms, average: 10us
+join (hash) : 5883675(sum: 58604252) with 3268ms, average: 555ns (55ns per element)
+join (merge): 994914(sum: 218870467) with 902ms, average: 906ns (4ns per element)
+[Contains]
+containsKey: 824498971
+containsValue: 0
+
+[Miscs]
+forEach: 21797851
+transform: 1488210
+filter: 3735293
+collect: 0
+keySet: 560655676
+values: 248122594
+
+[Lazy]
+resolveLazy: 50422512(sum: 9662118) with 2193ms, average: 43ns (227ns per element)
+
+----------- MergeableSubmap Statistics -----------
+Entry: 55093(sum: 5874216) with 600ms, average: 10us (102ns per element)
+Put: 11185444 with 1418ms, average: 126ns
+Get: 29569936 with 1223ms, average: 41ns
+Remove: 42701 with 14ms, average: 339ns
+
+----------- MergeableMap Statistics -----------
+[Copy]
+withHashMap: 2337823(sum: 14559543) with 232ms, average: 99ns (15ns per element)
+withMergeMap: 56343874(sum: 762216389) with 8994ms, average: 159ns (11ns per element)
+and cache uses 56343874(sum: 236693569) with 5714ms, average: 101ns (24ns per element)
+
+[Single Operation]
+put (hash) : 1705030874 with 34s, average: 20ns
+put (merge): 2500049 with 435ms, average: 174ns
+
+[Iteration]
+entrySet (hash) : 52652432 with 585ms, average: 11ns
+entrySet (merge): 62019 with 791ms, average: 12us
+join (hash) : 6416373(sum: 61047353) with 3454ms, average: 538ns (56ns per element)
+join (merge): 1065928(sum: 235559538) with 1496ms, average: 1us (6ns per element)
+[Contains]
+containsKey: 864391782
+containsValue: 0
+
+[Miscs]
+forEach: 22695217
+transform: 1613878
+filter: 4858191
+collect: 0
+keySet: 603657242
+values: 251427562
+
+[Lazy]
+resolveLazy: 51375099(sum: 16971417) with 3239ms, average: 63ns (190ns per element)
+
+----------- MergeableSubmap Statistics -----------
+Entry: 62019(sum: 8029032) with 787ms, average: 12us (98ns per element)
+Put: 19471467 with 2478ms, average: 127ns
+Get: 40592751 with 1724ms, average: 42ns
+Remove: 85402 with 20ms, average: 238ns
+
+----------- MergeableMap Statistics -----------
+[Copy]
+withHashMap: 2387568(sum: 15443574) with 244ms, average: 102ns (15ns per element)
+withMergeMap: 59713769(sum: 824096682) with 10s, average: 172ns (12ns per element)
+and cache uses 59713769(sum: 244800680) with 5950ms, average: 99ns (24ns per element)
+
+[Single Operation]
+put (hash) : 1740277406 with 35s, average: 20ns
+put (merge): 3497786 with 632ms, average: 180ns
+
+[Iteration]
+entrySet (hash) : 55738070 with 628ms, average: 11ns
+entrySet (merge): 68922 with 977ms, average: 14us
+join (hash) : 6948701(sum: 63489122) with 3637ms, average: 523ns (57ns per element)
+join (merge): 1136864(sum: 252083046) with 2093ms, average: 1us (8ns per element)
+[Contains]
+containsKey: 904049033
+containsValue: 0
+
+[Miscs]
+forEach: 23585036
+transform: 1739459
+filter: 5981061
+collect: 0
+keySet: 645955899
+values: 254599801
+
+[Lazy]
+resolveLazy: 52344499(sum: 24473955) with 4363ms, average: 83ns (178ns per element)
+
+----------- MergeableSubmap Statistics -----------
+Entry: 68922(sum: 10177298) with 972ms, average: 14us (95ns per element)
+Put: 27971742 with 3636ms, average: 130ns
+Get: 51599177 with 2213ms, average: 42ns
+Remove: 128103 with 26ms, average: 203ns
+
